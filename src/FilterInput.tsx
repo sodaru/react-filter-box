@@ -84,12 +84,12 @@ export default class FilterInput extends React.Component<any, any> {
             this.handlePressingAnyCharacter();
         })
 
-        ref.editor.on("focus", (cm, e?) => {
+        ref.editor.on("focus", (cm: any, e?: any) => {
             this.handlePressingAnyCharacter();
             this.props.onFocus(e);
         })
 
-        ref.editor.on("blur", (cm, e?) => {
+        ref.editor.on("blur", (cm: any, e?: any) => {
             this.onSubmit(this.doc.getValue());
             this.props.onBlur(e)
         })

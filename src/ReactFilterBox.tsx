@@ -113,5 +113,9 @@ export {
     GridDataAutoCompleteHandler,
     BaseAutoCompleteHandler,
     Option as AutoCompleteOption,
-    Expression
+    Expression,
+    FilterInput,
+    FilterQueryParser,
+    ParsedError,
+    validateQuery
 };

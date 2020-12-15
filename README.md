@@ -1,4 +1,22 @@
->## React Filter Box
+>## Sodaru/React Filter Box
+
+Made following changes to original package [nhabuiduc/react-filter-box](https://github.com/nhabuiduc/react-filter-box)
+
+* Exported
+  * `FilterInput`
+  * `FilterQueryParser`
+  * `ParsedError`
+  * `validateQuery`
+
+
+### Installation
+
+```
+npm i git+https://github.com/sodaru/react-filter-box.git
+```
+
+### Original README ###
+### _______________________________________________
 
 ![alt tag](https://github.com/nhabuiduc/react-filter-box/raw/master/images/react-filter-box-demo.png)
 
