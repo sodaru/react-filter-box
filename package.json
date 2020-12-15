@@ -14,10 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nhabuiduc/react-filter-box"
+    "url": "https://github.com/sodaru/react-filter-box"
   },
-  "main": "lib/react-filter-box.js",
-  "types": "./lib/src/ReactFilterBox.d.ts",
+  "main": "./lib/react-filter-box.js",
+  "typings": "./lib/src/ReactFilterBox.d.ts",
+  "files": [
+    "lib"
+  ],
   "keywords": [
     "react-component",
     "react",
@@ -30,10 +33,10 @@
     "edit",
     "webpack"
   ],
-  "author": "nha bui duc <hugodichoi@gmail.com> (http://github.com/nhabuiduc)",
+  "author": "Raghavendra K R <krraghavendra@yahoo.co.in> (http://github.com/raaghu)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nhabuiduc/react-filter-box"
+    "url": "https://github.com/sodaru/react-filter-box"
   },
   "homepage": "",
   "devDependencies": {
