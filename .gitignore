@@ -4,5 +4,6 @@ npm-debug.log
 dist
 typings
 lib/*.map
-lib/**/*.d.ts
+lib/test
+lib/src/example
 .vscode

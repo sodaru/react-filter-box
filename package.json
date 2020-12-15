@@ -18,9 +18,6 @@
   },
   "main": "./lib/react-filter-box.js",
   "typings": "./lib/src/ReactFilterBox.d.ts",
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "react-component",
     "react",
