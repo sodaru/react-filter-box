@@ -67,6 +67,7 @@
     "mocha-webpack": "^2.0.0-beta.0",
     "pegjs-loader": "^0.5.4",
     "react-day-picker": "^5.3.0",
+    "react-dom": "^16.6.3",
     "react-hot-loader": "^4.3.12",
     "react-test-renderer": "^16.6.3",
     "sinon": "^7.1.1",
@@ -84,8 +85,7 @@
     "lodash": "^4.17.19",
     "pegjs": "^0.10.0",
     "react": "^16.6.3",
-    "react-codemirror2": "^5.1.0",
-    "react-dom": "^16.6.3"
+    "react-codemirror2": "^5.1.0"
   },
   "resolutions": {
     "set-value": "2.0.1",
