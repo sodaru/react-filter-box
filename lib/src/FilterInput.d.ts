@@ -12,7 +12,6 @@ export default class FilterInput extends React.Component<any, any> {
     codeMirror: ExtendedCodeMirror;
     doc: CodeMirror.Doc;
     autoCompletePopup: AutoCompletePopup;
-    static defaultProps: any;
     constructor(props: any);
     findLastSeparatorPositionWithEditor(): {
         line: number;

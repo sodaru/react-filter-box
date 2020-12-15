@@ -18,12 +18,6 @@ export default class FilterInput extends React.Component<any, any> {
     doc: CodeMirror.Doc;
     autoCompletePopup: AutoCompletePopup;
 
-    public static defaultProps: any = {
-        onBlur: () => { },
-        onFocus: () => { },
-        editorConfig: { }
-    };
-
     constructor(props: any) {
         super(props);
 
@@ -48,6 +42,10 @@ export default class FilterInput extends React.Component<any, any> {
     private handlePressingAnyCharacter() {
         if (this.autoCompletePopup.completionShow) {
             return;
+        }
+
+        if(this.props.beforeAutoCompleteShow){
+            this.props.beforeAutoCompleteShow(this.codeMirror);
         }
 
         this.autoCompletePopup.show();
