@@ -8,6 +8,12 @@ Made following changes to original package [nhabuiduc/react-filter-box](https://
   * `ParsedError`
   * `validateQuery`
 
+### Publish 
+
+```
+npx tsc --project tsconfig.typescript.json
+```
+
 
 ### Installation
 

@@ -16,8 +16,11 @@
     "type": "git",
     "url": "https://github.com/sodaru/react-filter-box"
   },
-  "main": "./lib/react-filter-box.js",
-  "typings": "./lib/src/ReactFilterBox.d.ts",
+  "main": "./dist/ReactFilterBox.js",
+  "typings": "./dist/ReactFilterBox.d.ts",
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react-component",
     "react",
