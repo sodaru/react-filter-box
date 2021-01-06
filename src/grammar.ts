@@ -1,9 +1,13 @@
+
+
 /*
  * Grammar
  * ==========================
  *
  * Accepts expressions like: nha == nhat AND (nhat == nha or "nhat " contains "tt") OR nhat == "test"
  */
+
+export default `
 
 {
   var parseTrace = options.parseTrace;
@@ -66,3 +70,5 @@ ws "whitespace"
   
 _ "whitespace"
   = [ \t\n\r]*
+
+`;

@@ -8,6 +8,7 @@ export default class FilterQueryParser {
     autoCompleteHandler: BaseAutoCompleteHandler;
     lastError: PEG.PegjsError;
     parseTrace: ParseTrace;
+    parser: ExtendedParser;
     constructor();
     parse(query: string): Expression[] | ParsedError;
     private parseQuery;

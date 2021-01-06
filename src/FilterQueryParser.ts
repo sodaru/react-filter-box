@@ -1,4 +1,3 @@
-const parser: ExtendedParser = require("./grammar.pegjs");
 import * as PEG from "pegjs";
 import * as _ from "lodash";
 import BaseAutoCompleteHandler from "./BaseAutoCompleteHandler";
@@ -7,14 +6,18 @@ import grammarUtils from "./GrammarUtils";
 import { HintInfo } from "./models/ExtendedCodeMirror";
 import Expression from "./Expression";
 import ParsedError from "./ParsedError";
+import grammer from "./grammar";
 
 export default class FilterQueryParser {
     autoCompleteHandler = new BaseAutoCompleteHandler();
     lastError: PEG.PegjsError = null;
 
     parseTrace = new ParseTrace();
-    constructor() {
 
+    parser: ExtendedParser = null;
+    
+    constructor() {
+        this.parser = PEG.generate(grammer);
     }
 
     parse(query: string): Expression[] | ParsedError {
@@ -33,7 +36,7 @@ export default class FilterQueryParser {
 
     private parseQuery(query: string) {
         this.parseTrace.clear();
-        return parser.parse(query, { parseTrace: this.parseTrace });
+        return this.parser.parse(query, { parseTrace: this.parseTrace });
     }
 
     getSuggestions(query: string): HintInfo[] {
@@ -47,7 +50,7 @@ export default class FilterQueryParser {
             return [];
 
         } catch (ex) {
-            return this.autoCompleteHandler.handleParseError(parser, this.parseTrace, ex);
+            return this.autoCompleteHandler.handleParseError(this.parser, this.parseTrace, ex);
         }
     }
 
