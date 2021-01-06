@@ -50,25 +50,25 @@ Operator "operator"
 
 ValidValue "value"
   = ValidToken+ { parseTrace.pushValue(text() ); return text(); }  
-  /"\"" name:[^\"]* "\"" {
+  /"\\"" name:[^\\"]* "\\"" {
         var value = name.join("");
         parseTrace.pushValue(value);
         return value;
       }
 ValidName  "category"
   = ValidToken+ { parseTrace.pushCategory(text() ); return text(); }  
-  /"\"" name:[^\"]* "\"" {
+  /"\\"" name:[^\\"]* "\\"" {
         var value = name.join("");
         parseTrace.pushCategory(value);
         return value;
       }
 ValidToken
-  = [^ \(\)\"\t\n\r]
+  = [^ \\(\\)\\"\\t\\n\\r]
 
 ws "whitespace"
-  = [ \t\n\r]+
+  = [ \\t\\n\\r]+
   
 _ "whitespace"
-  = [ \t\n\r]*
+  = [ \\t\\n\\r]*
 
 `;
